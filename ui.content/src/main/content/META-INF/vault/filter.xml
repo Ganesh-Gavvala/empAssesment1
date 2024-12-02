@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/empAssessment1" mode="merge"/>
+    <filter root="/content/empAssessment1" mode="merge"/>
+    <filter root="/content/dam/empAssessment1/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/empAssessment1" mode="merge"/>
+</workspaceFilter>
