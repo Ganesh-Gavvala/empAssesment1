@@ -1,0 +1,20 @@
+
+<sly data-sly-use.model="com.empAssessment.core.models.FooterComponentBase" />
+
+
+
+<div>
+    <img class="image" src="${model.fileReference}" alt="${model.title}" />
+</div>
+     ${model.description}
+     ${model.title}
+
+
+    <sly data-sly-list.item="${model.actions}">
+            <div>
+                
+                <a class="link" href="${item.linkTarget}">${item.descriptionButton}</a>
+            </div>
+
+    </sly>
+</div>
