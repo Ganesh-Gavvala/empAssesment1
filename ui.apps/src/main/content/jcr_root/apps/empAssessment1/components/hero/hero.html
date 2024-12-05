@@ -1,8 +1,5 @@
-<sly data-sly-use.model="com.empAssessment.core.models.HeroComponent" />
 
-
-
-<img  src="${model.image}" alt="no image" />
+<!-- <img  src="${model.image}" alt="no image" />
 </br>
 ${model.title}
 </br>
@@ -12,7 +9,20 @@ ${model.label}
 </br>
 ${model.url}
 </br>
-   
-
+    -->
+    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+        <sly data-sly-call="${clientLib.css @ categories='empAssessment1.site'}" />
+      </sly>
+      <sly data-sly-use.model="com.empAssessment.core.models.HeroComponent" />  
+      <div class="hero-component">
+        <div class="hero-image-container">
+            <img class="hero-image" src="${model.fileReference}" alt="Image Description" />
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">${model.title}</h1>
+            <p class="hero-description">${model.description @ context='html'}</p>
+            <a class="hero-link" href="${model.url}" target="_blank">${model.label}</a>
+        </div>
+      </div>
 
 
