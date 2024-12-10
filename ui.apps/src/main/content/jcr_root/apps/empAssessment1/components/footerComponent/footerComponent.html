@@ -1,20 +1,35 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientLib.css @ categories='empAssessment1.site'}" />
 
 <sly data-sly-use.model="com.empAssessment.core.models.FooterComponentBase" />
 
+<div class="footer-container">
+    <!-- Left Block -->
+    <div class="footer-left-block">
+        <div class="logo-section">
+            <img src="${model.fileReference}" alt="Vonage Logo" class="logo-image" />
+        </div>
+        <div class="footer-description-block">
+            <p class="footer-description">
+                ${model.description @ context='html'}
+            </p>
+        </div>
+    </div>
 
-
-<div>
-    <img class="image" src="${model.fileReference}" alt="${model.title}" />
-</div>
-     ${model.description}
-     ${model.title}
-
-
-    <sly data-sly-list.item="${model.actions}">
-            <div>
-                
-                <a class="link" href="${item.linkTarget}">${item.descriptionButton}</a>
-            </div>
-
-    </sly>
+    <!-- Right Block -->
+    <div class="footer-right-block">
+        <h2>${model.title @ context='html'}</h2>
+        <ul class="quick-links">
+            <sly data-sly-list.item="${model.actions}">
+                <li>
+                    <!-- Add target="_blank" if openInNewTab is true -->
+                    <a href="${item.linkTarget}" 
+                       data-sly-attribute.target="${item.openInNewTab ? '_blank' : ''}" 
+                       data-sly-attribute.rel="${item.openInNewTab ? 'noopener noreferrer' : ''}">
+                        ${item.descriptionButton}
+                    </a>
+                </li>
+            </sly>
+        </ul>
+    </div>
 </div>

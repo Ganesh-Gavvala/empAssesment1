@@ -14,6 +14,8 @@ public class FooterComponentModel {
     private String descriptionButton;
     @ValueMapValue
     private String linkTarget;
+    @ValueMapValue
+    private boolean openInNewTab; 
 
 
 }

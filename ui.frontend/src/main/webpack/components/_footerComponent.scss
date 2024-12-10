@@ -1,0 +1,84 @@
+
+$font-family: "Arial, sans-serif";
+$border-color: #ddd;
+$text-color: #666;
+$link-color: #333;
+$header-color: #555;
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  border-top: 1px solid $border-color;
+  background-color: #fff;
+
+  .footer-left-block {
+    margin-top: -5rem;
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .logo-image {
+        width: 150px;
+        margin-top: 30px;
+      }
+    }
+
+    .footer-description-block {
+      margin-top: 240px;
+      max-width: 290px;
+      font-family: Spezia, Spezia_SemiMono, Arial, Helvetica, sans-serif;
+      color: #000;
+      font-size: 12px;
+      
+      font-weight: 400;
+
+      .footer-description{
+        margin-top: -200px;
+      }
+
+      
+    }
+  }
+
+  .footer-right-block {
+    margin-left: 70px;
+
+    h2 {
+      font-size: 16px;
+      color: $header-color;
+      margin-bottom: 10px;
+    }
+
+    .quick-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: Spezia, Spezia_SemiMono, Arial, Helvetica, sans-serif;
+
+      li {
+        margin-bottom: 5px;
+
+        a {
+          font-size: 14px;
+          color: $link-color;
+          text-decoration: none;
+
+          span {
+            font-size: 12px;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}
