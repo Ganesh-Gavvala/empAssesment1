@@ -11,7 +11,7 @@ import com.day.cq.wcm.api.WCMException;
 public class CreatePageImplCalssbyServlet implements CreatePageInterfacebyServlet{
     @Override
     public Page createPage(ResourceResolver resourceResolver,String pageName,String title) {
-       String parentPath="/content/empAssessment1/language-master/en-us";
+       String parentPath="/content/empAssessment1/us/en-us";
        
        String templatePath="/conf/empAssessment1/settings/wcm/templates/articletemplate";
       
